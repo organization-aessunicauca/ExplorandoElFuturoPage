@@ -4,6 +4,9 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
+
+
 (function($) {
 
 	var	$window = $(window),
@@ -19,9 +22,38 @@
 			xsmall:   [ null,      '480px'  ]
 		});
 
+
+
+//listener para overlay
+const overlay = document.getElementById('overlay Startups');
+document.querySelector('#Startups').addEventListener('click', () => {overlay.classList.add('activo');});
+
+//listener botón cerrar
+
+document.querySelector('#btn-cerrar-popup').addEventListener('click', () => {
+	overlay.classList.remove('activo');
+});
+
+//listener para overlay Aerospace
+const overlayAero = document.getElementById('overlay Aerospace');
+document.querySelector('#Aerospace').addEventListener('click', () => {overlayAero.classList.add('activo');});
+
+document.querySelector('#btn-cerrar-popup').addEventListener('click', () => {
+	overlay.classList.remove('activo');
+		});
+
+
+
+
+
+    				
+
+
 	// Hack: Enable IE flexbox workarounds.
 		if (browser.name == 'ie')
 			$body.addClass('is-ie');
+
+	
 
 	// Play initial animations on page load.
 		$window.on('load', function() {
@@ -129,6 +161,8 @@
 			}
 		});
 
+	
+
 	// Spotlights.
 		$('.spotlights > section')
 			.scrollex({
@@ -185,6 +219,9 @@
 						$(this).removeClass('inactive');
 
 				}
+				
 			});
+
+		
 
 })(jQuery);
